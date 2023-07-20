@@ -5,24 +5,30 @@ def scoremaker(playFile):
     with open(playFile, 'r') as file:
         for line in file:
             line = line.strip()
-            if line == 'AY':
+            if line == 'A Y':
                 tmp = 8
-            elif line == 'BX':
+            elif line == 'B X':
                 tmp = 1
-            elif line == 'CY':
+            elif line == 'C Y':
                 tmp = 2
-            elif line == 'CX':
+            elif line == 'C X':
                 tmp = 7
-            elif line == 'BZ':
+            elif line == 'B Z':
                 tmp = 9
-            elif line == 'AZ':
+            elif line == 'A Z':
                 tmp = 3
-            else:
-                tmp = 3
+            elif line == 'A X':
+                tmp = 4
+            elif line == 'C Z':
+                tmp = 6
+            elif line == 'B Y' or line == 'BY':
+                tmp = 5                
             scores.append(tmp)
             final += tmp
+            print(tmp)
     print(final)
     return scores
 
-playFile = "K:\Development Folder\Advent of code 2022\playbyplay.txt"
+playFile = r'C:\Users\bryan\Documents\GitHub\adventofcode\2022\Day-2\playbyplay.txt'
 plays = scoremaker(playFile)
+print(plays[1])
