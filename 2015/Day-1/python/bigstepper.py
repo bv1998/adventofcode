@@ -1,4 +1,4 @@
-textFile = r'/Users/bryan/Desktop/Python_scripts/Advent-of-Code-2015/PHP/Day-1/steps.txt'
+textFile = r'/Users/bryan/Desktop/Python_scripts/Advent-of-Code-2015/Python/Day-1/steps.txt'
 i = 0
 x = 0
 with open(textFile, 'r') as file:
